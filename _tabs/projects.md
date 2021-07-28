@@ -10,7 +10,7 @@ order: 4
 
 ### Libros
 
-[La plataforma de desarrollo GLib / GTK: una guía de introducción](https://github.com/gmbsdeveloper/glib-gtk-libro)
+[La plataforma de desarrollo GLib/GTK: una guía de introducción](https://github.com/gersonbdev/glib-gtk-libro)
 
 ## Documentación
 

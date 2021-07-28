@@ -2,7 +2,7 @@
 
 Un blog personal sencillo hecho sobre Jekyll y el tema Chirpy. Para mayor información dirigete a:
 
-[gmbsdeveloper.github.io](https://gmbsdeveloper.github.io/) 
+[gersonbdev.github.io](https://gersonbdev.github.io/) 
 
 ## Licencias
 
