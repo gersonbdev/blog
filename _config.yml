@@ -31,34 +31,34 @@ description: >-                        # used by seo meta and the atom feed
   además de algunos proyectos personales.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://gmbsdeveloper.github.io'
+url: 'https://gersonbdev.github.io'
 
 github:
-  username: gmbsdeveloper             # change to your github username
+  username: gersonbdev             # change to your github username
 
 twitter:
-  username: gmbsdeveloper            # change to your twitter username
+  username: gersonbdev            # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Gerson Benavides
-  email: gmbsdeveloper@gmail.com             # change to your email address
+  email: gersonbdev@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/gmbsdeveloper      # change to your twitter homepage
-    - https://github.com/gmbsdeveloper       # change to your github homepage
+    - https://twitter.com/gersonbdev     # change to your twitter homepage
+    - https://github.com/gersonbdev      # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: Q8WVTQcNkrNsTbni9U9GzaqxlVR-_eo0iqY5NXrwBUA # change to your verification string
+google_site_verification: 4rrfqHb31vL5v9faqtZPq6Y2HA3UiB2MvbbCzmsj7kw # change to your verification string
 
 # ↑ --------------------------
 
 
 google_analytics:
-  id: 'G-P51CS0TKZE'              # fill in your Google Analytics ID
+  id: 'G-7PCKTYTK2S'              # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
