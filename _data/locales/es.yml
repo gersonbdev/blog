@@ -62,9 +62,9 @@ post:
   published: 'publicado'
   updated: Actualizado
   timeago:
-    day: d atrás
-    hour: hr atrás
-    minute: min atrás
+    day: días atrás
+    hour: horas atrás
+    minute: minutos atrás
     just_now: ahora mismo
   words: palabras
   pageview_measure: visualizaciones
