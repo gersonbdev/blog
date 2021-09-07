@@ -14,5 +14,5 @@ Excepto donde se indique lo contrario, las publicaciones de blog en este sitio e
 
 Tanto [Jekyll](https://jekyllrb.com/) como [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy/) estan publicados bajo la licencia [MIT][mit].
 
-[mit]: https://github.com/gmbsdeveloper/gmbsdeveloper.github.io/blob/main/LICENSE
+[mit]: https://github.com/gersonbdev/gersonbdev.github.io/blob/main/LICENSE
 [ccby40]: https://creativecommons.org/licenses/by/4.0/

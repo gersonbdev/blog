@@ -9,28 +9,28 @@ React Native es un framework de código abierto para la creación de aplicacione
 
 Los siguientes pasos permiten la instalación de React Native en cualquier distribución de GNU/Linux.
 
-## Instalar snapd
+## Instala snapd
 
 En este caso haremos uso de snapd, ya que nos permitirá tener los paquetes estables mas recientes independientemente de la plataforma, para su instalación sigue las instrucciones del siguiente enlace:
 
 [Instalación de snapd](https://snapcraft.io/docs/installing-snapd)
 
-## Instalar Node.js usando snapd
+## Instala Node.js usando snapd
 
 `sudo snap install node --classic`
 
-## Instalar React Native
+## Instala React Native
 
 `sudo npm install -g react-native-cli`
 
-## Instalar Android Studio usando snapd
+## Instala Android Studio usando snapd
 
 `sudo snap install android-studio --classic`
 
-### Habilitar herramientas de linea de comando
+### Habilita las herramientas de linea de comando
 Abre Android Studio y dirígete a `More Actions >> SDK Manager >>  SDK Tools` y habilita `Android SDK Command-line Tools (latest)`.
 
-### Configurar variable de entorno PATH
+### Configura la variable de entorno PATH
 
 Ejecuta los siguientes comandos en la terminal (uno por uno):
 
