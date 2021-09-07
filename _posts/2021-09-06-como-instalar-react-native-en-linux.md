@@ -17,15 +17,21 @@ En este caso haremos uso de snapd, ya que nos permitirá tener los paquetes esta
 
 ## Instala Node.js usando snapd
 
-`sudo snap install node --classic`
+```terminal
+$ sudo snap install node --classic
+```
 
 ## Instala React Native
 
-`sudo npm install -g react-native-cli`
+```terminal
+$ sudo npm install -g react-native-cli
+```
 
 ## Instala Android Studio usando snapd
 
-`sudo snap install android-studio --classic`
+```terminal
+$ sudo snap install android-studio --classic
+```
 
 ### Habilita las herramientas de linea de comando
 Abre Android Studio y dirígete a `More Actions >> SDK Manager >>  SDK Tools` y habilita `Android SDK Command-line Tools (latest)`.
@@ -34,11 +40,19 @@ Abre Android Studio y dirígete a `More Actions >> SDK Manager >>  SDK Tools` y 
 
 Ejecuta los siguientes comandos en la terminal (uno por uno):
 
-``echo 'export ANDROID_HOME="$HOME/Android/Sdk"' >> ~/.profile``
+```terminal
+$ echo 'export ANDROID_HOME="$HOME/Android/Sdk"' >> ~/.profile
+```
 
-``echo 'export PATH="$PATH:$ANDROID_HOME/tools"' >> ~/.profile``
 
-``echo 'export PATH="$PATH:$ANDROID_HOME/platform-tools"' >> ~/.profile``
+```terminal
+$ echo 'export PATH="$PATH:$ANDROID_HOME/tools"' >> ~/.profile
+```
+
+
+```terminal
+$ echo 'export PATH="$PATH:$ANDROID_HOME/platform-tools"' >> ~/.profile
+```
 
 Ahora, reinicia tu equipo para cargar los cambios.
 
@@ -46,14 +60,24 @@ Ahora, reinicia tu equipo para cargar los cambios.
 
 ### Crea un nuevo proyecto
 
-`react-native init MyApp`
+```terminal
+$ react-native init MyApp
+```
 
-`cd ./MyApp/`
 
-`react-native start`
+```terminal
+$ cd ./MyApp/
+```
+
+
+```terminal
+$ react-native start
+```
 
 ### Ejecuta el proyecto
 
 Crea un dispositivo en Android Studio para simular la aplicación, luego abre una nueva terminal en la ruta del proyecto (./MyApp/) y escribe:
 
-`react-native run-android`
+```terminal
+$ react-native run-android
+```
