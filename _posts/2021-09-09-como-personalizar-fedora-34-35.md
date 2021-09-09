@@ -1,0 +1,137 @@
+---
+title: Cómo personalizar Fedora 34/35
+date: 2021-09-09 00:35:00 -0500
+categories: [tutoriales]
+tags: [linux, fedora]
+---
+
+## Instala la herramienta de retoques
+
+Esta herramienta te permitirá seleccionar los temas e iconos que instalaremos mas adelante.
+
+```terminal
+$ sudo dnf -y gnome-tweaks
+```
+
+## Instala un tema para las aplicaciones
+
+En este caso instalaremos el tema [Mojave](https://github.com/vinceliuice/Mojave-gtk-theme), si lo deseas puedes encontrar mas temas en [GNOME Look](https://www.gnome-look.org/).
+
+### Instala las dependencias del tema Mojave
+
+```terminal
+$ sudo dnf -y install gtk2-engines sassc optipng inkscape glib2-devel
+```
+
+### Instala el tema Mojave
+
+![Mojave screenshot](https://raw.githubusercontent.com/vinceliuice/Mojave-gtk-theme/images/screenshot01.jpeg)
+
+Para la instalación del tema entramos en una terminal y descargamos el tema de la siguiente manera:
+
+```terminal
+$ git clone https://github.com/vinceliuice/Mojave-gtk-theme.git
+```
+
+Instalamos el tema:
+
+```terminal
+$ cd Mojave-gtk-theme
+```
+
+
+```terminal
+$ ./install.sh
+```
+
+Borramos el directorio:
+
+```terminal
+$ cd ..
+```
+
+
+```terminal
+$ rm -rf Mojave-gtk-theme
+```
+
+Ya instalado, nos dirigimos al apartado de *apariencia* de la aplicación ***retoques*** donde podremos seleccionar el tema.
+
+## Instala un pack de iconos
+
+![Elemantary default app icon](https://raw.githubusercontent.com/elementary/icons/master/apps/64/application-default-icon.svg)
+![Elemantary locale preferences icon](https://raw.githubusercontent.com/elementary/icons/master/categories/64/preferences-desktop-locale.svg)
+![Elemantary terminal app icon](https://raw.githubusercontent.com/elementary/icons/master/apps/64/utilities-terminal.svg)
+
+Haremos uso del tema de [iconos de elementary OS](https://github.com/elementary/icons), para su instalacion escribiremos lo siguiente en la terminal:
+
+```terminal
+$ sudo dnf -y elementary-icon-theme
+```
+
+Ahora lo seleccionamos dentro de la aplicación ***retoques*** (en este caso podemos seleccionar tanto iconos como cursores).
+
+## Habilita la integración del navegador con GNOME
+
+Para instalar extensiones para nuestro entorno desde el navegador es necesario instalar el siguiente paquete:
+
+```terminal
+$ sudo dnf -y install chrome-gnome-shell
+```
+
+Luego de la instalación, entraremos a [GNOME Extensions](https://extensions.gnome.org/) para instalar la extensión nativa del navegador.
+
+### Instala Tray Icons: Reloaded
+
+![Tray Icons: Reloaded screenshot](https://extensions.gnome.org/extension-data/screenshots/screenshot_2890.png)
+
+Para habilitar los iconos en la bandeja superior, podemos instalar la extensión [Tray Icons: Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/), para ello solo debemos habilitar el botón de activación en su entrada de *GNOME Extensions*.
+
+## Personaliza el arranque (GRUB)
+
+![sleek theme screenshot](https://raw.githubusercontent.com/sandesh236/sleek--themes/master/images/orange.png)
+
+Para conseguir temas puedes dirigirte a [GNOME Look](https://www.gnome-look.org/browse?cat=109&ord=rating), en este caso instalaremos los temas de [sleek](https://github.com/sandesh236/sleek--themes), para ello abre una terminal y escribe:
+
+```terminal
+$ git clone https://github.com/sandesh236/sleek--themes.git
+```
+
+
+```terminal
+$ cd sleek--themes
+```
+
+![sleek theme dark](/assets/img/posts/2021/sleek-theme-dark.png)
+_Sleek theme-dark_
+![sleek theme bigsur](/assets/img/posts/2021/sleek-theme-bigsur.png)
+_Sleek theme-bigSur_
+![sleek theme light](/assets/img/posts/2021/sleek-theme-light.png)
+_Sleek theme-white_
+![sleek theme orange](/assets/img/posts/2021/sleek-theme-orange.png)
+_Sleektheme-orange_
+
+Reemplaza `theme` del siguiente comando por el tema que desees (cópialo de los pies de las anteriores imágenes):
+
+```terminal
+$ cd theme
+```
+
+Ejecuta el instalador del tema y sigue las instrucciones:
+
+```terminal
+$ sudo ./install.sh
+```
+
+Ahora borramos los archivos descargados:
+
+```terminal
+$ cd ../..
+```
+
+
+```terminal
+$ rm -rf sleek--themes
+```
+
+Ahora reinicia y disfruta de la nueva apariencia de tu entorno de escritorio.
