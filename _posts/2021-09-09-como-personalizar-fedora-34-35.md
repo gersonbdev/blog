@@ -102,13 +102,13 @@ $ git clone https://github.com/sandesh236/sleek--themes.git
 $ cd sleek--themes
 ```
 
-![sleek theme dark](/assets/img/posts/2021/sleek-theme-dark.png)
+![sleek theme dark](/assets/img/posts/2021/screenshot-sleek-theme-dark.png){: width="240" height="135" }
 _Sleek theme-dark_
-![sleek theme bigsur](/assets/img/posts/2021/sleek-theme-bigsur.png)
+![sleek theme bigsur](/assets/img/posts/2021/screenshot-sleek-theme-bigsur.png){: width="240" height="135" }
 _Sleek theme-bigSur_
-![sleek theme light](/assets/img/posts/2021/sleek-theme-light.png)
+![sleek theme light](/assets/img/posts/2021/screenshot-sleek-theme-light.png){: width="240" height="135" }
 _Sleek theme-white_
-![sleek theme orange](/assets/img/posts/2021/sleek-theme-orange.png)
+![sleek theme orange](/assets/img/posts/2021/screenshot-sleek-theme-orange.png){: width="240" height="135" }
 _Sleektheme-orange_
 
 Reemplaza `theme` del siguiente comando por el tema que desees (cópialo de los pies de las anteriores imágenes):
