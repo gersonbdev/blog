@@ -21,6 +21,12 @@ En este caso haremos uso de snapd, ya que nos permitirá tener los paquetes esta
 $ sudo snap install node --classic
 ```
 
+### Actualiza npm
+
+```terminal
+$ sudo npm install -g npm
+```
+
 ## Instala React Native
 
 ```terminal

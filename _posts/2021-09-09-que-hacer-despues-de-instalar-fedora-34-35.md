@@ -10,6 +10,8 @@ image:
   alt: Fedora banner
 ---
 
+Este es un breve tutorial del proceso de post-instalación de la distribución Fedora Linux 34/35. Donde se acondicionara el sistema con los paquetes básicos necesarios para el trabajo diario.
+
 ## Actualiza el sistema
 
 ```terminal

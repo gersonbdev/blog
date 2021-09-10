@@ -5,6 +5,24 @@ categories: [tutoriales]
 tags: [linux, fedora]
 ---
 
+Este es un breve tutorial para la personalización de Fedora Linux, donde se modificara tanto la interfaz de GNOME como su comportamiento, ademas de la personalización de la apariencia del arranque (GRUB).
+
+## Habilita la gestión e integración de extensiones en GNOME
+
+Para instalar extensiones para nuestro entorno desde el navegador y administrarlas es necesario instalar los siguientes paquetes:
+
+```terminal
+$ sudo dnf -y install gnome-extensions-app chrome-gnome-shell
+```
+
+Luego de la instalación, entraremos a [GNOME Extensions](https://extensions.gnome.org/) para instalar la extensión nativa del navegador.
+
+### Instala Tray Icons: Reloaded
+
+![Tray Icons: Reloaded screenshot](https://extensions.gnome.org/extension-data/screenshots/screenshot_2890.png)
+
+Para habilitar los iconos en la bandeja superior, podemos instalar la extensión [Tray Icons: Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/), para ello solo debemos habilitar el botón de activación en su entrada de *GNOME Extensions*.
+
 ## Instala la herramienta de retoques
 
 Esta herramienta te permitirá seleccionar los temas e iconos que instalaremos mas adelante.
@@ -57,6 +75,14 @@ $ rm -rf Mojave-gtk-theme
 
 Ya instalado, nos dirigimos al apartado de *apariencia* de la aplicación ***retoques*** donde podremos seleccionar el tema.
 
+En caso de que también desees activar el tema de *GNOME Shell*, dirígete a la aplicación ***extensiones*** y activa *User Themes* para habilitarlo en ***retoques***.
+
+![Icono de inicio de Fedora 01](/assets/img/posts/2021/icon-start-here-fedora-symbolic-01.svg)
+![Icono de inicio de Fedora 02](/assets/img/posts/2021/icon-start-here-fedora-symbolic-02.svg)
+![Icono a color de inicio de Fedora](/assets/img/posts/2021/icon-start-here-fedora-symbolic-color-01.svg)
+
+Si deseas cambiar la manzana del tema en el panel por el logo de Fedora, descarga los anteriores iconos y reemplazalos por los iconos del tema en la carpeta correspondiente (por ejemplo `/.themes/Mojave-light/gnome-shell/assets`).
+
 ## Instala un pack de iconos
 
 ![Elemantary default app icon](https://raw.githubusercontent.com/elementary/icons/master/apps/64/application-default-icon.svg)
@@ -70,22 +96,6 @@ $ sudo dnf -y elementary-icon-theme
 ```
 
 Ahora lo seleccionamos dentro de la aplicación ***retoques*** (en este caso podemos seleccionar tanto iconos como cursores).
-
-## Habilita la integración del navegador con GNOME
-
-Para instalar extensiones para nuestro entorno desde el navegador es necesario instalar el siguiente paquete:
-
-```terminal
-$ sudo dnf -y install chrome-gnome-shell
-```
-
-Luego de la instalación, entraremos a [GNOME Extensions](https://extensions.gnome.org/) para instalar la extensión nativa del navegador.
-
-### Instala Tray Icons: Reloaded
-
-![Tray Icons: Reloaded screenshot](https://extensions.gnome.org/extension-data/screenshots/screenshot_2890.png)
-
-Para habilitar los iconos en la bandeja superior, podemos instalar la extensión [Tray Icons: Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/), para ello solo debemos habilitar el botón de activación en su entrada de *GNOME Extensions*.
 
 ## Personaliza el arranque (GRUB)
 
