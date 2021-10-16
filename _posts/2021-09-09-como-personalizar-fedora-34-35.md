@@ -5,7 +5,7 @@ categories: [tutoriales]
 tags: [linux, fedora]
 ---
 
-Este es un breve tutorial para la personalización de Fedora Linux, donde se modificara tanto la interfaz de GNOME como su comportamiento, ademas de la personalización de la apariencia del arranque (GRUB).
+Este es un breve tutorial para la personalización de Fedora Linux, donde se modificara tanto la interfaz de GNOME como su comportamiento, además de la personalización de la apariencia del arranque (GRUB).
 
 ## Habilita la gestión e integración de extensiones en GNOME
 

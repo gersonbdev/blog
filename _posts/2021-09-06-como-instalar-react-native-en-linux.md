@@ -44,20 +44,16 @@ Abre Android Studio y dirígete a `More Actions >> SDK Manager >>  SDK Tools` y 
 
 ### Configura la variable de entorno PATH
 
-Ejecuta los siguientes comandos en la terminal (uno por uno):
+Dirígete a tu carpeta personal `/home/usuario` habilita los elementos ocultos (Ctrl + h) y en el archivo `.bash_profile` (puedes entrar directamente desde la terminal escribiendo `gedit $HOME/.bash_profile`) agrega el siguiente código:
 
-```terminal
-$ echo 'export ANDROID_HOME="$HOME/Android/Sdk"' >> ~/.profile
-```
+```bash
+# Setting the ANDROID_HOME environment variable
 
-
-```terminal
-$ echo 'export PATH="$PATH:$ANDROID_HOME/tools"' >> ~/.profile
-```
-
-
-```terminal
-$ echo 'export PATH="$PATH:$ANDROID_HOME/platform-tools"' >> ~/.profile
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 ```
 
 Ahora, reinicia tu equipo para cargar los cambios.

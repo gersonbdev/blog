@@ -17,10 +17,11 @@ tabs:
   about: Acerca de
   projects: Proyectos
 
-# text displayed in the search bar
+# the text displayed in the search bar & search results
 search:
   hint: buscar
   cancel: Cancelar
+  no_results: ¡Ups! No se han encontrado resultados.
 
 panel:
   lastmod: Actualización reciente
@@ -76,7 +77,9 @@ post:
   button:
     next: Siguiente
     previous: Anterior
-    copy:
+    copy_code:
+      succeed: ¡Copiado!
+    share_link:
       title: Copiar enlace
       succeed: ¡Enlace copiado correctamente!
   # pinned prompt of posts list on homepage

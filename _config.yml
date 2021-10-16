@@ -3,12 +3,13 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
-# Only if your site type is GitHub Project sites and doesn't have a custom domain,
-# change below value to '/projectname'.
+# Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
+# and doesn't have a custom domain.
 baseurl: ''
 
-# The language of the site layout › http://www.lingoes.net/en/translator/langcode.htm
-# Go to folder '_data/locales' to check the available language options
+# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
+# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
+# otherwise, the layout language will use the default value of 'en'.
 lang: es
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
@@ -77,7 +78,7 @@ theme_mode: dark   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: ''
+img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: /assets/img/profile/pf_001.jpg
