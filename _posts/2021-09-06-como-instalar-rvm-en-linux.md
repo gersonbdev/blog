@@ -5,49 +5,60 @@ categories: [tutoriales]
 tags: [linux, ruby]
 ---
 
-RVM es una herramienta de linea de comando, que permite fácilmente instalar, manejar y trabajar con múltiples entornos de Ruby. Para instalarlo en tu distribución GNU/Linux sigue los siguientes pasos:
+RVM es una herramienta de linea de comando, que permite fácilmente instalar, manejar y trabajar con múltiples entornos de Ruby. Para instalarlo en una distribución GNU/Linux siga los siguientes pasos:
 
-## Instala las llaves GPG
+## Instalación de dependencias
+
+### Ubuntu
+
+```console
+$ sudo apt install gnupg2 curl
+```
+
+## Instalación de las llaves GPG
 
 Para la verificación de los paquetes sera necesario la instalación de las siguientes llaves:
 
-```terminal
-$ gpg --keyserver hkp://pgp.mit.edu --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+```console
+$ gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 ```
 
-## Instala RVM con Ruby
+## Instalación de RVM con Ruby
 
 El siguiente comando instala la versión estable de RVM junto a la ultima versión de Ruby.
 
-```terminal
+```console
 $ \curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 
-### Configura la instalación
+### Configuración de la instalación
 
-Remplaza en el siguiente comando `usuario` por tu nombre de usuario y ejecutalo.
-
-```terminal
-$ source /home/usuario/.rvm/scripts/rvm
+```console
+$ source $HOME/.rvm/scripts/rvm
 ```
 
-## Instala una versión diferente de Ruby
+Reinicie su equipo para recargar los cambios en la variable PATH.
 
-```terminal
+## Instalación de una versión diferente de Ruby
+
+Si desea instalar en versión diferente a la predeterminada puede hacerlo como se muestra en el siguiente ejemplo (en este caso instalando la versión 2.7.4):
+
+```console
 $ rvm install 2.7.4
 ```
 
+Para seleccionar la versión instalada escriba:
 
-```terminal
+```console
 $ rvm use 2.7.4
 ```
 
-### Ejecuta un bundle especifico para una versión de Ruby
+### Ejecución de un bundle especifico para una versión de Ruby
 
-Puede darse el caso que nuestro sistema operativo posea su propia versión de Ruby y con ello que se haya configurado la variable PATH para su propio bundle, si ese es el caso podemos llamar un bundle especifico apuntando a la carpeta de la versión de Ruby, de la siguiente manera:
+Puede darse el caso que nuestro sistema operativo posea su propia versión de Ruby y con ello que se haya configurado la variable PATH para su propio bundle, si ese es el caso podemos llamar un bundle especifico apuntando a la carpeta de la versión que se desea de Ruby, de la siguiente manera:
 
-```terminal
+```console
 $ ~/.rvm/gems/ruby-2.7.4/wrappers/bundle install
 ```
 
-Si notaste algún error o recomendación no dudes en comentar.
+En este caso se ejecuta el comando `bundle install` usando la versión 2.7.4 como ejemplo.

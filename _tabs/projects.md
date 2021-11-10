@@ -6,13 +6,11 @@ order: 4
 
 ## Software
 
-## Traducciones
+## Documentación
 
 ### Libros
 
-[La plataforma de desarrollo GLib/GTK: una guía de introducción](https://github.com/gersonbdev/glib-gtk-libro)
-
-## Documentación
+[La plataforma de desarrollo GLib/GTK: Una guía de introducción](https://gersonbdev.github.io/glib-gtk-libro/)
 
 ### Wikipedia
 

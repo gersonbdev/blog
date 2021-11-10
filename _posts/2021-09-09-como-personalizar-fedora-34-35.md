@@ -11,7 +11,7 @@ Este es un breve tutorial para la personalización de Fedora Linux, donde se mod
 
 Para instalar extensiones para nuestro entorno desde el navegador y administrarlas es necesario instalar los siguientes paquetes:
 
-```terminal
+```console
 $ sudo dnf -y install gnome-extensions-app chrome-gnome-shell
 ```
 
@@ -27,7 +27,7 @@ Para habilitar los iconos en la bandeja superior, podemos instalar la extensión
 
 Esta herramienta te permitirá seleccionar los temas e iconos que instalaremos mas adelante.
 
-```terminal
+```console
 $ sudo dnf -y gnome-tweaks
 ```
 
@@ -37,7 +37,7 @@ En este caso instalaremos el tema [Mojave](https://github.com/vinceliuice/Mojave
 
 ### Instala las dependencias del tema Mojave
 
-```terminal
+```console
 $ sudo dnf -y install gtk2-engines sassc optipng inkscape glib2-devel
 ```
 
@@ -47,29 +47,29 @@ $ sudo dnf -y install gtk2-engines sassc optipng inkscape glib2-devel
 
 Para la instalación del tema entramos en una terminal y descargamos el tema de la siguiente manera:
 
-```terminal
+```console
 $ git clone https://github.com/vinceliuice/Mojave-gtk-theme.git
 ```
 
 Instalamos el tema:
 
-```terminal
+```console
 $ cd Mojave-gtk-theme
 ```
 
 
-```terminal
+```console
 $ ./install.sh
 ```
 
 Borramos el directorio:
 
-```terminal
+```console
 $ cd ..
 ```
 
 
-```terminal
+```console
 $ rm -rf Mojave-gtk-theme
 ```
 
@@ -91,7 +91,7 @@ Si deseas cambiar la manzana del tema en el panel por el logo de Fedora, descarg
 
 Haremos uso del tema de [iconos de elementary OS](https://github.com/elementary/icons), para su instalacion escribiremos lo siguiente en la terminal:
 
-```terminal
+```console
 $ sudo dnf -y elementary-icon-theme
 ```
 
@@ -103,12 +103,12 @@ Ahora lo seleccionamos dentro de la aplicación ***retoques*** (en este caso pod
 
 Para conseguir temas puedes dirigirte a [GNOME Look](https://www.gnome-look.org/browse?cat=109&ord=rating), en este caso instalaremos los temas de [sleek](https://github.com/sandesh236/sleek--themes), para ello abre una terminal y escribe:
 
-```terminal
+```console
 $ git clone https://github.com/sandesh236/sleek--themes.git
 ```
 
 
-```terminal
+```console
 $ cd sleek--themes
 ```
 
@@ -123,24 +123,24 @@ _Sleektheme-orange_
 
 Reemplaza `theme` del siguiente comando por el tema que desees (cópialo de los pies de las anteriores imágenes):
 
-```terminal
+```console
 $ cd theme
 ```
 
 Ejecuta el instalador del tema y sigue las instrucciones:
 
-```terminal
+```console
 $ sudo ./install.sh
 ```
 
 Ahora borramos los archivos descargados:
 
-```terminal
+```console
 $ cd ../..
 ```
 
 
-```terminal
+```console
 $ rm -rf sleek--themes
 ```
 

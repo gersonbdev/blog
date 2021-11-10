@@ -9,42 +9,56 @@ React Native es un framework de código abierto para la creación de aplicacione
 
 Los siguientes pasos permiten la instalación de React Native en cualquier distribución de GNU/Linux.
 
-## Instala snapd
+## Instalación de dependencias
 
-En este caso haremos uso de snapd, ya que nos permitirá tener los paquetes estables mas recientes independientemente de la plataforma, para su instalación sigue las instrucciones del siguiente enlace:
+### Instalación de Java
+
+Es necesaria la instalación de Java para ejecutar proyectos de React Native sobre Android, para ello ejecute:
+
+* Ubuntu
+
+```console
+$ sudo apt install default-jre
+```
+
+## Instalación de snapd
+
+En este caso haremos uso de snapd, ya que nos permitirá tener los paquetes estables mas recientes independientemente de la distribución, para su instalación sigue las instrucciones del siguiente enlace:
 
 [Instalación de snapd](https://snapcraft.io/docs/installing-snapd)
 
-## Instala Node.js usando snapd
+> **📌 Nota:** Si posee Ubuntu puede ignorar esta instalación.
 
-```terminal
-$ sudo snap install node --classic
+## Instalación de Node.js usando snapd
+
+```console
+$ sudo snap install node --channel=16/stable --classic
 ```
 
-### Actualiza npm
+### Actualización de npm
 
-```terminal
+```console
 $ sudo npm install -g npm
 ```
 
-## Instala React Native
+## Instalación de React Native
 
-```terminal
+```console
 $ sudo npm install -g react-native-cli
 ```
 
-## Instala Android Studio usando snapd
+## Instalación de Android Studio usando snapd
 
-```terminal
+```console
 $ sudo snap install android-studio --classic
 ```
 
-### Habilita las herramientas de linea de comando
-Abre Android Studio y dirígete a `More Actions >> SDK Manager >>  SDK Tools` y habilita `Android SDK Command-line Tools (latest)`.
+### Habilitación de las herramientas de linea de comando
+Abra Android Studio y diríjase a `More Actions >> SDK Manager >>  SDK Tools` y habilite `Android SDK Command-line Tools (latest)`.
 
-### Configura la variable de entorno PATH
+### Configuración de la variable de entorno PATH
 
-Dirígete a tu carpeta personal `/home/usuario` habilita los elementos ocultos (Ctrl + h) y en el archivo `.bash_profile` (puedes entrar directamente desde la terminal escribiendo `gedit $HOME/.bash_profile`) agrega el siguiente código:
+Diríjase a su carpeta personal (`/home/usuario`) y habilite los elementos ocultos (puede hacerlo pulsando `Ctrl + h`), luego abra el archivo `.bash_profile` y agregue el siguiente código:
 
 ```bash
 # Setting the ANDROID_HOME environment variable
@@ -56,30 +70,32 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 ```
 
-Ahora, reinicia tu equipo para cargar los cambios.
+> **📌 Nota:** Puede entrar directamente desde la terminal escribiendo `gedit $HOME/.bash_profile`.
 
-## Verificación de instalación
+Ahora, reinicie su equipo para cargar los cambios.
 
-### Crea un nuevo proyecto
+## Verificación de la instalación
 
-```terminal
+### Creación de un nuevo proyecto
+
+```console
 $ react-native init MyApp
 ```
 
 
-```terminal
+```console
 $ cd ./MyApp/
 ```
 
 
-```terminal
+```console
 $ react-native start
 ```
 
-### Ejecuta el proyecto
+### Ejecución del proyecto
 
 Crea un dispositivo en Android Studio para simular la aplicación, luego abre una nueva terminal en la ruta del proyecto (./MyApp/) y escribe:
 
-```terminal
+```console
 $ react-native run-android
 ```
