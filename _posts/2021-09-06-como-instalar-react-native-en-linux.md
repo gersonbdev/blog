@@ -5,15 +5,19 @@ categories: [tutoriales]
 tags: [linux, javascript]
 ---
 
-React Native es un framework de código abierto para la creación de aplicaciones móviles multiplataforma, el cual hace uso de tecnologías web para el desarrollo, fundamentándose en JavaScipt.
-
-Los siguientes pasos permiten la instalación de React Native en cualquier distribución de GNU/Linux.
+React Native es un framework de código abierto para la creación de aplicaciones móviles multiplataforma, el cual hace uso de tecnologías web para el desarrollo, fundamentándose en JavaScipt. Para instalarlo siga los siguientes pasos:
 
 ## Instalación de dependencias
 
 ### Instalación de Java
 
 Es necesaria la instalación de Java para ejecutar proyectos de React Native sobre Android, para ello ejecute:
+
+* Fedora
+
+```console
+$ sudo dnf -y install java
+```
 
 * Ubuntu
 
@@ -23,7 +27,7 @@ $ sudo apt install default-jre
 
 ## Instalación de snapd
 
-En este caso haremos uso de snapd, ya que nos permitirá tener los paquetes estables mas recientes independientemente de la distribución, para su instalación sigue las instrucciones del siguiente enlace:
+En este caso se hará uso de snapd, ya que permite tener los paquetes estables mas recientes independientemente de la distribución (también puede utilizar su gestor de paquetes nativo si así lo desea), para su instalación siga las instrucciones del siguiente enlace:
 
 [Instalación de snapd](https://snapcraft.io/docs/installing-snapd)
 
@@ -54,6 +58,7 @@ $ sudo snap install android-studio --classic
 ```
 
 ### Habilitación de las herramientas de linea de comando
+
 Abra Android Studio y diríjase a `More Actions >> SDK Manager >>  SDK Tools` y habilite `Android SDK Command-line Tools (latest)`.
 
 ### Configuración de la variable de entorno PATH
@@ -94,7 +99,7 @@ $ react-native start
 
 ### Ejecución del proyecto
 
-Crea un dispositivo en Android Studio para simular la aplicación, luego abre una nueva terminal en la ruta del proyecto (./MyApp/) y escribe:
+Cree un dispositivo en Android Studio para simular la aplicación, luego abra una nueva terminal en la ruta del proyecto (`./MyApp/`) y escriba:
 
 ```console
 $ react-native run-android

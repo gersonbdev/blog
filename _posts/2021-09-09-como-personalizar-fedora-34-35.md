@@ -7,51 +7,53 @@ tags: [linux, fedora]
 
 Este es un breve tutorial para la personalización de Fedora Linux, donde se modificara tanto la interfaz de GNOME como su comportamiento, además de la personalización de la apariencia del arranque (GRUB).
 
-## Habilita la gestión e integración de extensiones en GNOME
+## Habilitación de la gestión de extensiones en GNOME
 
-Para instalar extensiones para nuestro entorno desde el navegador y administrarlas es necesario instalar los siguientes paquetes:
+Para instalar extensiones en el entorno desde el navegador y administrarlas es necesario instalar los siguientes paquetes:
 
 ```console
 $ sudo dnf -y install gnome-extensions-app chrome-gnome-shell
 ```
 
-Luego de la instalación, entraremos a [GNOME Extensions](https://extensions.gnome.org/) para instalar la extensión nativa del navegador.
+Luego de la instalación, entre a [GNOME Extensions](https://extensions.gnome.org/) e instale la extensión nativa del navegador.
 
-### Instala Tray Icons: Reloaded
+### Habilitación de iconos en bandeja
 
-![Tray Icons: Reloaded screenshot](https://extensions.gnome.org/extension-data/screenshots/screenshot_2890.png)
+![AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension-data/screenshots/screenshot_615.png)
 
-Para habilitar los iconos en la bandeja superior, podemos instalar la extensión [Tray Icons: Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/), para ello solo debemos habilitar el botón de activación en su entrada de *GNOME Extensions*.
+Para habilitar los iconos en la bandeja superior, es necesario instalar alguna *extensión de GNOME* que lo permita, para ello diríjase a [GNOME Extensions](https://extensions.gnome.org/) e instale la extensión [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/) habilitando el botón de activación de la pagina.
 
-## Instala la herramienta de retoques
+> **📌 Nota:** Esta extensión es la misma que usa Ubuntu en su escritorio.
 
-Esta herramienta te permitirá seleccionar los temas e iconos que instalaremos mas adelante.
+## Instalación de la herramienta retoques
+
+Esta herramienta le permitirá seleccionar los temas e iconos que se instalaran mas adelante.
 
 ```console
-$ sudo dnf -y gnome-tweaks
+$ sudo dnf -y install gnome-tweaks
 ```
 
-## Instala un tema para las aplicaciones
+## Instalación de un tema para las aplicaciones
 
-En este caso instalaremos el tema [Mojave](https://github.com/vinceliuice/Mojave-gtk-theme), si lo deseas puedes encontrar mas temas en [GNOME Look](https://www.gnome-look.org/).
+En este caso, se instalara el tema [Mojave](https://github.com/vinceliuice/Mojave-gtk-theme), si lo deseas puede encontrar mas temas en [GNOME Look](https://www.gnome-look.org/).
 
-### Instala las dependencias del tema Mojave
+### Instalación de las dependencias del tema Mojave
 
 ```console
 $ sudo dnf -y install gtk2-engines sassc optipng inkscape glib2-devel
 ```
 
-### Instala el tema Mojave
+### Instalación del tema Mojave
 
 ![Mojave screenshot](https://raw.githubusercontent.com/vinceliuice/Mojave-gtk-theme/images/screenshot01.jpeg)
 
-Para la instalación del tema entramos en una terminal y descargamos el tema de la siguiente manera:
+Para la instalación del tema entre en una terminal y descargue el tema de la siguiente manera:
 
 ```console
 $ git clone https://github.com/vinceliuice/Mojave-gtk-theme.git
 ```
 
-Instalamos el tema:
+Instale el tema:
 
 ```console
 $ cd Mojave-gtk-theme
@@ -62,7 +64,7 @@ $ cd Mojave-gtk-theme
 $ ./install.sh
 ```
 
-Borramos el directorio:
+Borre el directorio:
 
 ```console
 $ cd ..
@@ -73,35 +75,37 @@ $ cd ..
 $ rm -rf Mojave-gtk-theme
 ```
 
-Ya instalado, nos dirigimos al apartado de *apariencia* de la aplicación ***retoques*** donde podremos seleccionar el tema.
+Ya instalado, diríjase al apartado de *apariencia* de la aplicación ***retoques*** donde podra seleccionar el tema.
 
-En caso de que también desees activar el tema de *GNOME Shell*, dirígete a la aplicación ***extensiones*** y activa *User Themes* para habilitarlo en ***retoques***.
+En caso de que también desee activar el tema de *GNOME Shell*, diríjase a la aplicación ***extensiones*** y active *User Themes* para habilitarlo en ***retoques***.
 
 ![Icono de inicio de Fedora 01](/assets/img/posts/2021/icon-start-here-fedora-symbolic-01.svg)
 ![Icono de inicio de Fedora 02](/assets/img/posts/2021/icon-start-here-fedora-symbolic-02.svg)
 ![Icono a color de inicio de Fedora](/assets/img/posts/2021/icon-start-here-fedora-symbolic-color-01.svg)
 
-Si deseas cambiar la manzana del tema en el panel por el logo de Fedora, descarga los anteriores iconos y reemplazalos por los iconos del tema en la carpeta correspondiente (por ejemplo `/.themes/Mojave-light/gnome-shell/assets`).
+Si desea cambiar la manzana del tema en el panel por el logo de Fedora, descargue los anteriores iconos y reemplacelos por los iconos del tema en la carpeta correspondiente (por ejemplo `/.themes/Mojave-light/gnome-shell/assets`).
 
-## Instala un pack de iconos
+## Instalación de un pack de iconos
 
 ![Elemantary default app icon](https://raw.githubusercontent.com/elementary/icons/master/apps/64/application-default-icon.svg)
 ![Elemantary locale preferences icon](https://raw.githubusercontent.com/elementary/icons/master/categories/64/preferences-desktop-locale.svg)
 ![Elemantary terminal app icon](https://raw.githubusercontent.com/elementary/icons/master/apps/64/utilities-terminal.svg)
 
-Haremos uso del tema de [iconos de elementary OS](https://github.com/elementary/icons), para su instalacion escribiremos lo siguiente en la terminal:
+Se hará uso del tema de [iconos de elementary OS](https://github.com/elementary/icons), para su instalación escriba en una terminal:
 
 ```console
-$ sudo dnf -y elementary-icon-theme
+$ sudo dnf -y install elementary-icon-theme
 ```
 
-Ahora lo seleccionamos dentro de la aplicación ***retoques*** (en este caso podemos seleccionar tanto iconos como cursores).
+Ahora selecciónelo dentro de la aplicación ***retoques*** (en este caso puede seleccionar tanto iconos como cursores).
 
-## Personaliza el arranque (GRUB)
+## Personalización del arranque (GRUB)
 
 ![sleek theme screenshot](https://raw.githubusercontent.com/sandesh236/sleek--themes/master/images/orange.png)
 
-Para conseguir temas puedes dirigirte a [GNOME Look](https://www.gnome-look.org/browse?cat=109&ord=rating), en este caso instalaremos los temas de [sleek](https://github.com/sandesh236/sleek--themes), para ello abre una terminal y escribe:
+> **📌 Nota:** Si su sistema usa EFI es posible que sea necesario comentar la linea `GRUB_TERMINAL_OUTPUT="console"` del archivo `/etc/default/grub` y que construya nuevamente el archivo grub.cfg escribiendo `grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg` en una terminal.
+
+Para conseguir temas puedes dirigirse a [GNOME Look](https://www.gnome-look.org/browse?cat=109&ord=rating), en este caso se instalara los temas de [sleek](https://github.com/sandesh236/sleek--themes), para ello abra una terminal y escriba:
 
 ```console
 $ git clone https://github.com/sandesh236/sleek--themes.git
@@ -121,19 +125,19 @@ _Sleek theme-white_
 ![sleek theme orange](/assets/img/posts/2021/screenshot-sleek-theme-orange.png){: width="240" height="135" }
 _Sleektheme-orange_
 
-Reemplaza `theme` del siguiente comando por el tema que desees (cópialo de los pies de las anteriores imágenes):
+Reemplace `theme` del siguiente comando por el tema que desee (cópielo de los pies de las anteriores imágenes):
 
 ```console
 $ cd theme
 ```
 
-Ejecuta el instalador del tema y sigue las instrucciones:
+Ejecute el instalador del tema y siga las instrucciones:
 
 ```console
 $ sudo ./install.sh
 ```
 
-Ahora borramos los archivos descargados:
+Borre los archivos descargados:
 
 ```console
 $ cd ../..
@@ -144,4 +148,4 @@ $ cd ../..
 $ rm -rf sleek--themes
 ```
 
-Ahora reinicia y disfruta de la nueva apariencia de tu entorno de escritorio.
+Y con ello habrá finalizado la personalización general del sistema.

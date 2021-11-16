@@ -4,6 +4,14 @@ Un blog personal sencillo hecho sobre Jekyll y el tema Chirpy. Para mayor inform
 
 [gersonbdev.github.io](https://gersonbdev.github.io/) 
 
+## Compilacion
+
+Para compilar el sitio web, clone el repositorio y ejecute en una terminal:
+
+```console
+$ bundle exec jekyll s
+```
+
 ## Licencias
 
 ### Blog

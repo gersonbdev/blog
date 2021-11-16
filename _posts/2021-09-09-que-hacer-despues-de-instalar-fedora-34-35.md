@@ -10,19 +10,19 @@ image:
   alt: Fedora banner
 ---
 
-Este es un breve tutorial del proceso de post-instalación de la distribución Fedora Linux 34/35. Donde se acondicionara el sistema con los paquetes básicos necesarios para el trabajo diario.
+Este es un breve tutorial del proceso de post-instalación de la distribución Fedora Linux 34/35. El cual acondiciona el sistema con los paquetes básicos necesarios.
 
-## Actualiza el sistema
+## Actualización del sistema
 
 ```console
 $ sudo dnf -y update
 ```
 
-## Añade los repositorios extras
+## Adición de repositorios extras
 
 ### RPMFusion
 
-Para habilitar el soporte de paquetes con licencias propietarias es buena idea agregar los repositorios de RPMFusion, para ello escribe el siguiente comando: 
+Habilite el soporte de paquetes con licencias propietarias, añadiendo los repositorios de RPMFusion. Para ello escriba en una terminal: 
 
 ```console
 $ sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -30,11 +30,15 @@ $ sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-r
 
 ### Flathub
 
+Fedora de manera predeterminada hace uso del gestor de paquetes *Flatpak*, lo que le permite instalar aplicaciones contenidas sin tener que preocuparse por las dependencias que estas tengan. Flathub es el principal repositorio para este gestor, teniendo un gran numero de aplicaciones disponibles, para agregarlo puede escribir en una terminal:
+
 ```console
 $ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 ### Snap
+
+Si necesita software muy especifico empaquetado por Canonical o sus socios (como por ejemplo Flutter), puede ser buena idea agregar Snap como gestor de paquetes en su sistema.
 
 ```console
 $ sudo dnf -y install snapd
@@ -45,9 +49,11 @@ $ sudo dnf -y install snapd
 $ sudo ln -s /var/lib/snapd/snap /snap
 ```
 
-Reinicia tu sistema para recargar la variable de entorno PATH.
+Reinicie su sistema para recargar la variable de entorno PATH.
 
-## Instala los códecs multimedia
+> **📌 Nota:** Tener múltiples gestores de paquetes puede ser poco útil si no necesita de software muy especifico. Tenga en cuenta que Snap actualmente **no** posee soporte con GNOME Software (al menos en lo que respecta a Fedora).
+
+## Instalación de los códecs multimedia
 
 ```console
 $ sudo dnf -y install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
@@ -63,19 +69,19 @@ $ sudo dnf -y install lame\* --exclude=lame-devel
 $ sudo dnf -y group upgrade --with-optional Multimedia
 ```
 
-## Instala el soporte de compresión/descompresión
+## Instalación del soporte de compresión/descompresión
 
 ```console
 $ sudo dnf -y install zip unzip unrar p7zip p7zip-plugins bzip2
 ```
 
-## Instala Java
+## Instalación de Java
 
 ```console
 $ sudo dnf -y install java
 ``` 
 
-## Instala las fuentes tipográficas de Microsoft
+## Instalación de las fuentes tipográficas de Microsoft
 
 ```console
 $ sudo dnf -y install curl cabextract xorg-x11-font-utils fontconfig
@@ -83,30 +89,30 @@ $ sudo dnf -y install curl cabextract xorg-x11-font-utils fontconfig
 
 
 ```console
-$ rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+$ sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 ```
 
-## Instala el paquete de idioma español para LibreOffice
+## Instalación del paquete de idioma español para LibreOffice
 
 ```console
 $ sudo dnf -y install libreoffice libreoffice-langpack-es
 ```
 
-## Personaliza el entorno de escritorio GNOME
+## Personalización del entorno de escritorio GNOME
 
-Para personalizar el entorno de escritorio puedes dirigirte a la siguiente publicación:
+Puede personalizar el entorno de escritorio dirigiéndose al siguiente enlace:
 
 [Cómo personalizar Fedora 34/35](https://gersonbdev.github.io/posts/2021/09/como-personalizar-fedora-34-35/)
 
-## Habilita la interfaz del cortafuegos
+## Habilitación de interfaz grafica del cortafuegos
 
 ```console
 $ sudo dnf -y install firewalld firewall-config
 ```
 
-## Instala las herramientas de compilación
+## Instalación de las herramientas de compilación
 
-En caso de no encontrar el binario de algún paquete es buena idea tener a disposición las siguientes herramientas para realizar la compilación por nosotros mismos:
+En caso de no encontrar el binario de algún paquete es buena idea tener a disposición las siguientes herramientas para realizar la compilación por usted mismo:
 
 ```console
 $ sudo dnf -y install kernel-headers kernel-devel

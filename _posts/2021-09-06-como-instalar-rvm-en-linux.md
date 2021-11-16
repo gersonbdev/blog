@@ -5,11 +5,17 @@ categories: [tutoriales]
 tags: [linux, ruby]
 ---
 
-RVM es una herramienta de linea de comando, que permite fácilmente instalar, manejar y trabajar con múltiples entornos de Ruby. Para instalarlo en una distribución GNU/Linux siga los siguientes pasos:
+RVM es una herramienta de linea de comando, que permite fácilmente instalar, manejar y trabajar con múltiples entornos de Ruby. Para instalarlo siga los siguientes pasos:
 
 ## Instalación de dependencias
 
-### Ubuntu
+* Fedora
+
+```console
+$ sudo dnf install gnupg2 curl
+```
+
+* Ubuntu
 
 ```console
 $ sudo apt install gnupg2 curl
@@ -41,7 +47,7 @@ Reinicie su equipo para recargar los cambios en la variable PATH.
 
 ## Instalación de una versión diferente de Ruby
 
-Si desea instalar en versión diferente a la predeterminada puede hacerlo como se muestra en el siguiente ejemplo (en este caso instalando la versión 2.7.4):
+Si desea instalar una versión diferente a la predeterminada puede hacerlo como se muestra en el siguiente ejemplo (en este caso instalando la versión 2.7.4):
 
 ```console
 $ rvm install 2.7.4
@@ -55,7 +61,7 @@ $ rvm use 2.7.4
 
 ### Ejecución de un bundle especifico para una versión de Ruby
 
-Puede darse el caso que nuestro sistema operativo posea su propia versión de Ruby y con ello que se haya configurado la variable PATH para su propio bundle, si ese es el caso podemos llamar un bundle especifico apuntando a la carpeta de la versión que se desea de Ruby, de la siguiente manera:
+En caso de que su sistema operativo posea su propia versión de Ruby y con ello que se haya configurado la variable PATH para su propio bundle, puede llamar un bundle especifico apuntando a la carpeta de la versión que desea de Ruby, de la siguiente manera:
 
 ```console
 $ ~/.rvm/gems/ruby-2.7.4/wrappers/bundle install
