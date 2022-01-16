@@ -98,6 +98,7 @@ flush() {
 
   shopt -s dotglob nullglob
   mv "$_backup_dir"/* .
+  [[ -f ".nojekyll" ]] || echo "" >".nojekyll"
 }
 
 deploy() {
@@ -135,24 +136,24 @@ while (($#)); do
   opt="$1"
   case $opt in
     -c | --config)
-      _config="$2"
-      shift
-      shift
-      ;;
-    --dry-run)
-      # build & test, but not deploy
-      _opt_dry_run=true
-      shift
-      ;;
-    -h | --help)
-      help
-      exit 0
-      ;;
-    *)
-      # unknown option
-      help
-      exit 1
-      ;;
+    _config="$2"
+    shift
+    shift
+    ;;
+  --dry-run)
+    # build & test, but not deploy
+    _opt_dry_run=true
+    shift
+    ;;
+  -h | --help)
+    help
+    exit 0
+    ;;
+  *)
+    # unknown option
+    help
+    exit 1
+    ;;
   esac
 done
 

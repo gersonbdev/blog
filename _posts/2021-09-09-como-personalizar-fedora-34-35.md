@@ -3,6 +3,11 @@ title: Cómo personalizar Fedora 34/35
 date: 2021-09-09 00:35:00 -0500
 categories: [tutoriales]
 tags: [linux, fedora]
+image:
+  src: /assets/img/posts/2021/banner-fedora-logo-01.png
+  width: 1280
+  height: 720
+  alt: Fedora banner
 ---
 
 Este es un breve tutorial para la personalización de Fedora Linux, donde se modificara tanto la interfaz de GNOME como su comportamiento, además de la personalización de la apariencia del arranque (GRUB).
