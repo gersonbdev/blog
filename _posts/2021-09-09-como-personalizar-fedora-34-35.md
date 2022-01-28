@@ -24,9 +24,9 @@ Luego de la instalación, entre a [GNOME Extensions](https://extensions.gnome.or
 
 ### Habilitación de iconos en bandeja
 
-![AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension-data/screenshots/screenshot_615.png)
+![AppIndicator and KStatusNotifierItem Screenshot](/assets/img/posts/2022/screenshot-appindicator-and-kstatusnotifieritem-001.png)
 
-Para habilitar los iconos en la bandeja superior, es necesario instalar alguna *extensión de GNOME* que lo permita, para ello diríjase a [GNOME Extensions](https://extensions.gnome.org/) e instale la extensión [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/) habilitando el botón de activación de la pagina.
+Para habilitar los iconos en la bandeja superior, es necesario instalar alguna *extensión de GNOME* que lo permita, para ello diríjase a [GNOME Extensions](https://extensions.gnome.org/) e instale la extensión [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) habilitando el botón de activación de la pagina.
 
 > **📌 Nota:** Esta extensión es la misma que usa Ubuntu en su escritorio.
 

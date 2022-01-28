@@ -1,5 +1,8 @@
 ---
 title: Qué hacer después de instalar Fedora 34/35
+author:
+  name: Gerson Benavides
+  link: https://twitter.com/gersonbdev
 date: 2021-09-09 13:45:00 -0500
 categories: [tutoriales]
 tags: [linux, fedora]
